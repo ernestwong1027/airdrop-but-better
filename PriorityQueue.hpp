@@ -3,22 +3,21 @@
 
 class PriorityQueue {
     
-    HuffmanNode *heap;
-    int size;
-    int capacity;
-
+    
     public:
-        PriorityQueue(int size);
-
+        PriorityQueue(int capacity);
         ~PriorityQueue();
 
-        void swap(int *a, int *b);
-
-        void bottom_up(int child);
-
-        void top_down(int parent);
-
         void add(HuffmanNode *node);
-
         HuffmanNode* pop();
+        int getSize();
+
+    private:
+        HuffmanNode *heap;
+        int size;
+        int capacity;
+        void swap(int *a, int *b);
+        void bottom_up(int child);
+        void top_down(int parent);
+        
 };

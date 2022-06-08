@@ -1,5 +1,4 @@
 #include "HuffmanEncoding.hpp"
-#include "PriorityQueue.hpp"
 
 HuffmanEncoding::HuffmanEncoding(char* fileName_){
     fileName = fileName_;
@@ -15,7 +14,7 @@ void HuffmanEncoding::encode(){
 }
 
 void HuffmanEncoding::buildFrequencyArray(){
-    freqArray = (int*)malloc(sizeof(int)*256);
+    freqArray = (int*)malloc(sizeof(int)*CHUNK_SIZE);
     int numChunks; //TODO
     for(int i = 0; i<numChunks; i++){
         int chunk; //TODO
@@ -24,13 +23,31 @@ void HuffmanEncoding::buildFrequencyArray(){
 }
 
 void HuffmanEncoding::buildFrequencyQueue(){
-    PriorityQueue* frequencyQueue = new PriorityQueue();
+    frequencyQueue = new PriorityQueue(CHUNK_SIZE);
+    for(int i =0; i<CHUNK_SIZE; i++){
+        HuffmanNode* node = createNode(i,freqArray[i], NULL,NULL);
+        frequencyQueue->add(node);
+    }
 }
 
 void buildTree() {
+    while (frequencyQueue->getSize() > 1) {
+        //extract two nodes
+        HuffmanNode* left = frequencyQueue->pop();
+        HuffmanNode* right = frequencyQueue->pop();
 
+        //create new internal node
+        int internalNodeFrequency = left->frequency + right->frequency;
+        HuffmanNode* node = createNode(INTERNAL_NODE_VALUE, internalNodeFrequency, left, right);
+
+        //add to pq
+        frequencyQueue->add(node);          
+    }
+    root = frequencyQueue->pop();
 }
 
-void buildCompressedFile();
+void buildCompressedFile(){
+    
+}
 void addNode();  
         
