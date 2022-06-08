@@ -1,4 +1,5 @@
-HuffmanNode* createNode(int data, int frequency, HuffmanNode* left, HuffmanNode* right);
+#ifndef HUFFMAN_NODE_HEADER
+#define HUFFMAN_NODE_HEADER
 
 typedef struct HuffmanNode {
     int frequency;
@@ -6,4 +7,7 @@ typedef struct HuffmanNode {
     HuffmanNode* left;
     HuffmanNode* right;
 } HuffmanNode;
+
+HuffmanNode* createNode(int data, int frequency, HuffmanNode* left, HuffmanNode* right);
+#endif
 
