@@ -8,3 +8,6 @@ send tree or map
     there are only 256 numbers in 8 bit how do you represent -1 ... 255?????
     map -> smaller file size, simpler encode, slower decode (ammortize O(1) worst case O(n)). but don't know implementation of std::map so how to get map memory
 
+bitset copy and paste
+big endian vs little endian left shift
+
