@@ -13,7 +13,7 @@ class HuffmanEncoding {
       
     public:
         HuffmanEncoding(char* fileName_);
-        void createFile(void *ptr, size_t size);
+
         int* freqArray;
         char* fileName;
         long size;
@@ -31,7 +31,8 @@ class HuffmanEncoding {
         int encodeChunks();   
         void buildCompressedFile();
         void createMap(HuffmanNode *node, int prefix);
-        void encodeTreeInorder(HuffmanNode *node, uint8_t cleverInternalNodePlaceholder);
-        void encodeTreePreorder(HuffmanNode *node, uint8_t cleverInternalNodePlaceholder);
+        int mapToArray();
+        // void encodeTreeInorder(HuffmanNode *node, uint8_t cleverInternalNodePlaceholder);
+        // void encodeTreePreorder(HuffmanNode *node, uint8_t cleverInternalNodePlaceholder);
         ExecuteResult encode();
 };

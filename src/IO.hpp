@@ -32,6 +32,8 @@ InputBuffer *new_input_buffer();
 
 void prompt_read();
 
+void createFile(void *ptr, size_t size);
+
 void print_parse_error(ParseResult result);
 
 void print_execute_error(ExecuteResult result);

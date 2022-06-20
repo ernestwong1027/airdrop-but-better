@@ -12,6 +12,15 @@ InputBuffer *new_input_buffer() {
     return input_buffer;
 }
 
+void createFile(void *ptr, size_t size) {
+    //create file pointer
+    int r = rand();
+    char* filename_ = (char *)malloc(20*sizeof(char));
+    sprintf(filename_,"%d",r);
+    FILE* file = fopen(filename_, "wb+"); 
+    fwrite(ptr, size, 1, file);    
+}
+
 void close_buffer(InputBuffer *input_buffer) {
     free(input_buffer->buffer);
     free(input_buffer);
