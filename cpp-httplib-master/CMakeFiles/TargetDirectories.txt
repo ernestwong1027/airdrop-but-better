@@ -1,0 +1,6 @@
+/Users/danielzhu/downloads/cpp-httplib-master/CMakeFiles/edit_cache.dir
+/Users/danielzhu/downloads/cpp-httplib-master/CMakeFiles/rebuild_cache.dir
+/Users/danielzhu/downloads/cpp-httplib-master/CMakeFiles/list_install_components.dir
+/Users/danielzhu/downloads/cpp-httplib-master/CMakeFiles/install.dir
+/Users/danielzhu/downloads/cpp-httplib-master/CMakeFiles/install/local.dir
+/Users/danielzhu/downloads/cpp-httplib-master/CMakeFiles/install/strip.dir
