@@ -7,7 +7,8 @@ void dfs2(HuffmanNode *node){
     if(node->left)dfs2(node->left);
     if(node->right)dfs2(node->right);
 }
-HuffmanDecoding::HuffmanDecoding(char* fileName_){
+
+HuffmanDecoding::HuffmanDecoding(char* fileName_){    
     srand(time(NULL));
     fileName = fileName_;
     memoryBlock = (uint8_t*) malloc(128* 1E6);

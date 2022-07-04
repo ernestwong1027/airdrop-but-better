@@ -1,10 +1,12 @@
-#include "HuffmanDecoding.hpp"
-#include "HuffmanEncoding.hpp"
+// #include "HuffmanDecoding.hpp"
+// #include "HuffmanEncoding.hpp"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include "server.hpp"
 
 
-int main () {
-// HuffmanEncoding h = HuffmanEncoding("test");
-//     h.encode();
-    HuffmanDecoding hd = HuffmanDecoding("16807");
-    hd.decode();
+int main()
+{
+    create_server(8080);
 }

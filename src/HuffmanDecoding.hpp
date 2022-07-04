@@ -4,6 +4,7 @@
 #include <time.h>
 #include "HuffmanNode.hpp"
 
+
 #include "IO.hpp"
 
 #define INTERNAL_NODE_VALUE -1
